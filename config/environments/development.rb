@@ -42,19 +42,10 @@ Rails.application.configure do
   # Needed for devise
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
-    # Sets paperclip to upload images to Amazon S3
   config.paperclip_defaults = {
-    :storage => :s3,
-    :s3_credentials => {
-      :bucket => ENV['AWS_BUCKET'],
-      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-    }
-  }
-
-  # config/initializers/paperclip.rb
-Paperclip::Attachment.default_options[:url] = ':s3_domain_url'
-Paperclip::Attachment.default_options[:path] = '/:class/:attachment/:id_partition/:style/:filename'
-Paperclip::Attachment.default_options[:s3_host_name] = 's3-us-west-2.amazonaws.com'
+  :storage => :s3,
+  :s3_host_name => 'REMOVE_THIS_LINE_IF_UNNECESSARY',
+  :bucket => 'S3_BUCKET_NAME'
+}
 
 end
