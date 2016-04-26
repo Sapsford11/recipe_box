@@ -36,8 +36,6 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    amazon_s3 (0.0.2)
-      aws-sdk
     arel (6.0.3)
     autoprefixer-rails (6.3.6)
       execjs
@@ -194,7 +192,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  amazon_s3 (~> 0.0.2)
+  aws-sdk (~> 2.2, >= 2.2.36)
   bootstrap-sass (~> 3.3, >= 3.3.6)
   byebug
   cocoon (~> 1.2, >= 1.2.9)
