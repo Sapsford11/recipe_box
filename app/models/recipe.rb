@@ -13,6 +13,6 @@ class Recipe < ActiveRecord::Base
 
   validates :title, :description, :image, presence: true
 
-	has_attached_file :image, styles: { :medium => "500x454#" }
+	has_attached_file :image, styles: { :medium => "500x500#" }
 	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 end
